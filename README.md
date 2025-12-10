@@ -8,7 +8,7 @@
 
 ### 简介
 
-<img src="./display.png" alt="screenshot" width="100%">
+<img src="./Display.png" alt="screenshot" width="100%">
 
 #### 功能特性
 
