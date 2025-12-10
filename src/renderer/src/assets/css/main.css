@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply select-none overflow-hidden font-sans;
+    /* 亮色模式底色改为更有质感的灰白，暗色模式保持深黑 */
+    @apply bg-zinc-50 text-zinc-900; 
+    @apply dark:bg-[#090909] dark:text-zinc-100;
+  }
+}
+
+/* 隐藏所有元素的滚动条但允许滚动 */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
+
+/* 自定义滚动条轨道（如果以后想加回来可以用这个，现在设为隐藏） */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* 拖拽区域 */
+.draggable { -webkit-app-region: drag; }
+.no-drag { -webkit-app-region: no-drag; }
+
+/* 动画工具类 */
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
